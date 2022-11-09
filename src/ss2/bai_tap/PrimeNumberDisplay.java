@@ -13,14 +13,15 @@ public class PrimeNumberDisplay {
         // tìm số nguyên tố bắt dầu từ số 2
         int i = 2;
         while (count < n) {
-            if (PrimeNumber(i)) {
+            if (primeNumber(i)) {
                 System.out.print(i + " ");
                 count++;
             }
             i++;
         }
     }
-    public static boolean PrimeNumber(int n) {
+    
+    public static boolean primeNumber(int n) {
         // so nguyen n < 2 khong phai la so nguyen to
         if (n < 2) {
             return false;
