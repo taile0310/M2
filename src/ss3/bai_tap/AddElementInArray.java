@@ -3,7 +3,7 @@ package ss3.bai_tap;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class DeleteElementInArray {
+public class AddElementInArray {
     public static void main(String[] args) {
         int[] arr = {10, 4, 6, 7, 8, 0, 0, 0, 0};
         Scanner input = new Scanner(System.in);

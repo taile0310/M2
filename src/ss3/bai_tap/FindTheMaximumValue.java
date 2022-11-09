@@ -6,11 +6,12 @@ import java.util.Scanner;
 public class FindTheMaximumValue {
     public static void main(String[] args) {
 
-        int[][] arr = new int[3][3];
-        int max = 0;
+        int[][] arr = new int[2][3];
+//        [2] là số dòng, [3] là số cột
+        double max = arr[0][0];
         Scanner sc = new Scanner(System.in);
 
-        for (int i = 1; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 System.out.println("enter the element of the array " + i + " index " + j);
                 arr[i][j] = Integer.parseInt(sc.nextLine());
@@ -19,10 +20,10 @@ public class FindTheMaximumValue {
         System.out.println(Arrays.deepToString(arr));
 
 
-        for (int[] ints : arr) {
-            for (int anInt : ints) {
-                if (anInt > max) {
-                    max = anInt;
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length ; j++) {
+                if (max < arr[i][j]) {
+                    max = arr[i][j];
                 }
             }
         }
