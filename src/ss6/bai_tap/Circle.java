@@ -2,14 +2,14 @@ package ss6.bai_tap;
 
 import java.util.Scanner;
 
-public class ClassCircle {
+public class Circle {
     private static double radius;
     private String color;
 
-    public ClassCircle() {
+    public Circle() {
     }
 
-    public ClassCircle(double radius) {
+    public Circle(double radius) {
         this.radius = radius;
 
     }
@@ -42,7 +42,7 @@ public class ClassCircle {
                 '}';
     }
 
-    static class Cylinder extends ClassCircle {
+    static class Cylinder extends Circle {
         private double heigth;
 
         public Cylinder() {
@@ -72,19 +72,7 @@ public class ClassCircle {
                     '}';
         }
     }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter radius: ");
-        int r = Integer.parseInt(scanner.nextLine());
-        ClassCircle classCircle = new ClassCircle(r);
-        System.out.println("Area circle is: " + classCircle.getArea());
-
-        System.out.println("Enter height: ");
-        double h = Double.parseDouble(scanner.nextLine());
-        Cylinder cylinder = new Cylinder(h);
-        System.out.println("Volume cylinder is: " + cylinder.getVolume());
-    }
 }
+
+
 
