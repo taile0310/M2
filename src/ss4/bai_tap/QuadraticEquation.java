@@ -1,37 +1,37 @@
 package ss4.bai_tap;
 
 public class QuadraticEquation {
-    public int a;
-    public int b;
-    public int c;
+    private double a;
+    private double b;
+    private double c;
 
-    public QuadraticEquation(int a, int b, int c){
+    public QuadraticEquation(double a, double b, double c){
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    public int getA() {
+    public double getA() {
         return a;
     }
 
-    public void setA(int a) {
+    public void setA(double a) {
         this.a = a;
     }
 
-    public int getB() {
+    public double getB() {
         return b;
     }
 
-    public void setB(int b) {
+    public void setB(double b) {
         this.b = b;
     }
 
-    public int getC() {
+    public double getC() {
         return c;
     }
 
-    public void setC(int c) {
+    public void setC(double c) {
         this.c = c;
     }
 

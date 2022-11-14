@@ -8,13 +8,13 @@ public class QuadraticEquationMain {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter number a: ");
-        int a = Integer.parseInt(sc.nextLine());
+        double a = Double.parseDouble(sc.nextLine());
 
         System.out.println("Enter number b: ");
-        int b = Integer.parseInt(sc.nextLine());
+        double b = Double.parseDouble(sc.nextLine());
 
         System.out.println("Enter number c: ");
-        int c = Integer.parseInt(sc.nextLine());
+        double c = Double.parseDouble(sc.nextLine());
 
         QuadraticEquation quadraticEquation = new QuadraticEquation(a, b, c);
         quadraticEquation.getA();
