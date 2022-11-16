@@ -30,10 +30,10 @@ public class MyListTest {
         }
 
         public static void main(String[] args) {
-            Student a = new Student(1, "Quan");
+            Student a = new Student(1, "Tien");
             Student b = new Student(2, "Hoang");
-            Student c = new Student(3, "Truong");
-            Student d = new Student(4, "Tai");
+            Student c = new Student(3, "Thong");
+            Student d = new Student(4, "Quan");
             Student e = new Student(5, "The");
             Student f = new Student(6, "The2");
 
