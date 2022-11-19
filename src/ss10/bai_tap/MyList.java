@@ -2,18 +2,18 @@ package ss10.bai_tap;
 
 import java.util.Arrays;
 
-public class MyList<E> {
+public class Stack<E> {
 
 
     private int size = 0;
     private static final int DEFAULT_CAPACITY = 10;
     Object elements[];
 
-    public MyList() {
+    public Stack() {
         elements = new Object[DEFAULT_CAPACITY];
     }
 
-    public MyList(int capacity) {
+    public Stack(int capacity) {
         if (capacity >= 0) {
             elements = new Object[capacity];
         } else {
@@ -33,7 +33,7 @@ public class MyList<E> {
 
     }
 
-    public boolean add(E element) {
+    public boolean push(E element) {
         if (elements.length == size) {
             this.ensureCapacity(5);
         }
@@ -42,7 +42,7 @@ public class MyList<E> {
         return true;
     }
 
-    public void add(E element, int index) {
+    public void push(E element, int index) {
         if (index > elements.length) {
             throw new IllegalArgumentException("index: " + index);
         } else if (elements.length == size) {
@@ -91,8 +91,8 @@ public class MyList<E> {
         return this.indexOf(element) >= 0;
     }
 
-    public MyList<E> clone() {
-        MyList<E> v = new MyList<>();
+    public Stack<E> clone() {
+        Stack<E> v = new Stack<>();
         v.elements = Arrays.copyOf(elements, size);
         v.size = this.size;
         return v;
