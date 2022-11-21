@@ -39,12 +39,12 @@ public class MyListTest {
 
             MyList<Student> studentMyList = new MyList<>();
             MyList<Student> newMyList = new MyList<>();
-            studentMyList.add(a);
-            studentMyList.add(b);
-            studentMyList.add(c);
-            studentMyList.add(d);
-            studentMyList.add(e);
-            studentMyList.add(f, 2);
+            studentMyList.push(a);
+            studentMyList.push(b);
+            studentMyList.push(c);
+            studentMyList.push(d);
+            studentMyList.push(e);
+            studentMyList.push(f, 2);
             studentMyList.size();
 
             System.out.println(studentMyList.size());
