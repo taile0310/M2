@@ -1,4 +1,4 @@
-package ss16.bai_tap;
+package ss16.bai_tap.bai1;
 
 public class Countries {
     private String code;

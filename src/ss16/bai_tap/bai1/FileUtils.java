@@ -1,4 +1,4 @@
-package ss16.bai_tap;
+package ss16.bai_tap.bai1;
 
 import java.io.*;
 import java.util.ArrayList;
