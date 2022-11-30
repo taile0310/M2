@@ -3,8 +3,8 @@ package ss16.bai_tap.bai2;
 import java.io.*;
 
 public class CopyFileTest {
-    public static final String FILE_NAME = "src/ss17/bai_tap/sourtFile.csv";
-    public static final String FILE_COPY = "src/ss17/bai_tap/copy.csv";
+    public static final String FILE_NAME = "src/ss16/bai_tap/bai2/sourtFile";
+    public static final String FILE_COPY = "src/ss16/bai_tap/bai2/copy.csv";
 
     public static void main(String[] args) {
 
@@ -25,8 +25,6 @@ public class CopyFileTest {
                 bufferedWriter.write(line);
                 System.out.println(line);
                 sum += CopyFileTest.countString(line);
-
-
             }
             bufferedWriter.flush();
             System.out.println(" Số ký tự trong mã nguồn " + sum);
@@ -47,8 +45,8 @@ public class CopyFileTest {
             }
 
         }
-
     }
+
 
     public static int countString(String str) {
         int count = 0;
