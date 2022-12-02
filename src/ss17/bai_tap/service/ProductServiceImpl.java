@@ -2,45 +2,36 @@ package ss17.bai_tap.service;
 
 import ss17.bai_tap.exception.ExistedProductException;
 import ss17.bai_tap.model.Product;
-import sun.net.www.content.text.Generic;
 
+import javax.swing.event.ListDataEvent;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductServiceImpl implements IProduct {
-    private final List<Product> products = new ArrayList<>();
-
     private final String PATH_FILE = "src/ss17/bai_tap/product.csv";
+
+    private final IBinary binary = new ProductIBinary();
 
 
     @Override
-    public void add(Product product){
-            products.add(product);
-        FileOutputStream fileOutputStream = null;
-        ObjectOutputStream objectOutputStream = null;
-        try {
-            fileOutputStream = new FileOutputStream(PATH_FILE);
-            objectOutputStream = new ObjectOutputStream(fileOutputStream);
+    public void add(Product product) throws IOException, ClassNotFoundException, ExistedProductException {
+        List<Product> productList = this.binary.readProduct(PATH_FILE);
 
-            objectOutputStream.writeObject(products);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } finally {
-            try{
-                assert objectOutputStream != null;
-                objectOutputStream.close();
-                fileOutputStream.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+        for (Product p : productList){
+            if (p.getId() == product.getId()){
+                throw new ExistedProductException();
             }
         }
+        productList.add(product);
+        this.binary.writeProduct(PATH_FILE, productList);
     }
 
     @Override
-    public void search(int id) {
+    public void search(int id) throws IOException, ClassNotFoundException {
+        List<Product> productList = this.binary.readProduct(PATH_FILE);
 //        boolean check = true;
-        for (Product p : products) {
+        for (Product p : productList) {
 //            check = false;
             if (p.getId() == id) {
                 System.out.println(p);
@@ -54,8 +45,9 @@ public class ProductServiceImpl implements IProduct {
     }
 
     @Override
-    public void display() {
-        for (Product p : products) {
+    public void display() throws IOException, ClassNotFoundException {
+        List<Product> productList = this.binary.readProduct(PATH_FILE);
+        for (Product p : productList) {
             System.out.println(p);
         }
     }

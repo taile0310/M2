@@ -1,6 +1,8 @@
 package ss17.bai_tap.model;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     /*private: dùng để kiểm soát người dùng nhập xuất dữ liệu */
     private int id;
     private String name;

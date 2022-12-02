@@ -12,12 +12,17 @@ public class ProductIBinary implements IBinary{
     @Override
     public List<Product> readProduct(String pathFile) throws IOException, ClassNotFoundException {
         List<Product> products = new ArrayList<>();
-        FileInputStream fileInputStream = new FileInputStream(pathFile);
-        ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-        products = (List<Product>)objectInputStream.readObject();
-        objectInputStream.close();
-        fileInputStream.close();
-        return products;
+        try {
+            FileInputStream fileInputStream = new FileInputStream(pathFile);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            products = (List<Product>)objectInputStream.readObject();
+            objectInputStream.close();
+            fileInputStream.close();
+            return products;
+        } catch (EOFException e) {
+            System.out.println(e.getMessage());
+            return products;
+        }
     }
 
     @Override
