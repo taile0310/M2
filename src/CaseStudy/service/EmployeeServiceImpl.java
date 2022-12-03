@@ -7,12 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeServiceImpl implements IEmployee {
-    private static final List<Employee> employeeList;
-
-    static {
-        employeeList = new ArrayList<>();
-    }
-
+    private static final List<Employee> employeeList = new ArrayList<>();
+    
     @Override
     public List<Employee> display(Employee employee) {
         return EmployeeServiceImpl.employeeList;
