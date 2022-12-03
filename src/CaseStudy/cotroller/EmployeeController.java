@@ -7,19 +7,19 @@ import CaseStudy.service.IEmployee;
 public class EmployeeController {
     IEmployee employeeService = new EmployeeServiceImpl();
 
-    public void displayEmployee(){
-        this.employeeService.display();
+    public void displayEmployee(Employee employee){
+        this.employeeService.display(employee);
     }
 
     public void addEmployee(Employee employee) {
         this.employeeService.add(employee);
     }
 
-    public void deleteEmployee() {
-        this.employeeService.delete();
+    public void deleteEmployee(Employee employee) {
+        this.employeeService.delete(employee);
     }
 
-    public void editEmployee() {
-        this.employeeService.edit();
+    public void editEmployee(Employee employee) {
+        this.employeeService.edit(employee);
     }
 }

@@ -7,33 +7,39 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeServiceImpl implements IEmployee {
+    private static final List<Employee> employeeList;
+
+    static {
+        employeeList = new ArrayList<>();
+    }
+
     @Override
-    public void display() {
-        List<Employee> employee = new ArrayList<>();
-        for (Employee e: employee) {
-            System.out.println(e);
-        }
+    public List<Employee> display(Employee employee) {
+        return EmployeeServiceImpl.employeeList;
     }
 
     @Override
     public void add(Employee employee) {
-        List<Employee> employees = new ArrayList<>();
-        employees.add(employee);
+        employeeList.add(employee);
     }
 
     @Override
     public void delete(Employee employee) {
-        List<Employee> employees = new ArrayList<>();
-        for (Employee emp :employees) {
-            if (emp.getIdentityCard() == employee.getIdentityCard()){
-                delete(emp);
+        for (Employee employee1 : employeeList) {
+            if (employee1.getIdentityCard() == employee.getIdentityCard()) {
+                employeeList.remove(employee);
                 break;
             }
         }
     }
 
     @Override
-    public void edit() {
-
+    public void edit(Employee employee) {
+        for (Employee employee1 : employeeList) {
+            employee1.setId(employee.getId());;
+            employee1.setIdentityCard(employee.getIdentityCard());
+            employee1.setName(employee.getName());
+            break;
+        }
     }
 }

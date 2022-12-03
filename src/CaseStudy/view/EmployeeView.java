@@ -12,7 +12,7 @@ public class EmployeeView {
     private Scanner scanner = new Scanner(System.in);
 
 
-    public void menuEmployee(){
+    public  void menuEmployee(){
         do {
             System.out.println("Menu: ");
             System.out.println("1.Display list employees");
@@ -23,9 +23,10 @@ public class EmployeeView {
             System.out.println("6.Exit");
             System.out.println("Please enter your selection");
             int choose = Integer.parseInt(scanner.nextLine());
+            Employee employee = new Employee();
             switch (choose){
                 case 1:
-                    employeeController.displayEmployee();
+                    employeeController.displayEmployee(employee);
                     break;
                 case 2:
                     System.out.print("input id: ");
@@ -48,14 +49,15 @@ public class EmployeeView {
                     String location = scanner.nextLine();
                     System.out.print("input wage: ");
                     Double wage = Double.parseDouble(scanner.nextLine());
-                    Employee employee = new Employee(id, name, date, gender, identity, phone, mail, level, location, wage);
+                    employee = new Employee(id, name, date, gender, identity, phone, mail, level, location, wage);
                     employeeController.addEmployee(employee);
                     break;
                 case 3:
-                    employeeController.deleteEmployee();
+                    employeeController.deleteEmployee(employee);
+
                     break;
                 case 4:
-                    employeeController.editEmployee();
+                    employeeController.editEmployee(employee);
                     break;
                 case 5:
                     menuEmployee();
