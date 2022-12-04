@@ -24,18 +24,22 @@ public class EmployeeServiceImpl implements IEmployee {
 
     @Override
     public void delete(Employee employee) {
+        Employee deleteEmp = null;
         for (Employee employee1 : employeeList) {
-            if (employee1.getIdentityCard() == employee.getIdentityCard()) {
-                employeeList.remove(employee.getId());
+            if (employee.getIdentityCard() == employee1.getIdentityCard()) {
+                deleteEmp = employee1;
                 break;
             }
+        }
+        if (deleteEmp == null){
+            employeeList.remove(deleteEmp);
         }
     }
 
     @Override
     public void edit(Employee employee) {
         for (Employee employee1 : employeeList) {
-            employee1.setId(employee.getId());;
+            employee1.setId(employee.getId());
             employee1.setIdentityCard(employee.getIdentityCard());
             employee1.setName(employee.getName());
             break;
