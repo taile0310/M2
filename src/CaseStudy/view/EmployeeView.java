@@ -10,7 +10,7 @@ public class EmployeeView {
     private final EmployeeController employeeController = new EmployeeController();
 
     private Scanner scanner = new Scanner(System.in);
-
+    private Employee employee = new Employee();
 
     public  void menuEmployee(){
         do {
@@ -23,9 +23,12 @@ public class EmployeeView {
             System.out.println("6.Exit");
             System.out.println("Please enter your selection");
             int choose = Integer.parseInt(scanner.nextLine());
-            Employee employee = new Employee();
+
             switch (choose){
                 case 1:
+//                    for (Employee emp : employee) {
+//                        System.out.println(emp);
+//                    }
                     employeeController.displayEmployee(employee);
                     break;
                 case 2:

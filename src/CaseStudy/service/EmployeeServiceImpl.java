@@ -8,10 +8,13 @@ import java.util.List;
 
 public class EmployeeServiceImpl implements IEmployee {
     private static final List<Employee> employeeList = new ArrayList<>();
-    
+
     @Override
-    public List<Employee> display(Employee employee) {
-        return EmployeeServiceImpl.employeeList;
+    public void display(Employee employee) {
+        for (Employee e : employeeList) {
+            System.out.println(e);
+        }
+
     }
 
     @Override
@@ -23,7 +26,7 @@ public class EmployeeServiceImpl implements IEmployee {
     public void delete(Employee employee) {
         for (Employee employee1 : employeeList) {
             if (employee1.getIdentityCard() == employee.getIdentityCard()) {
-                employeeList.remove(employee);
+                employeeList.remove(employee.getId());
                 break;
             }
         }
