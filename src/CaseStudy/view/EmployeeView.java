@@ -26,9 +26,6 @@ public class EmployeeView {
 
             switch (choose){
                 case 1:
-//                    for (Employee emp : employee) {
-//                        System.out.println(emp);
-//                    }
                     employeeController.displayEmployee(employee);
                     break;
                 case 2:

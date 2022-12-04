@@ -2,6 +2,7 @@ package CaseStudy.view;
 
 import CaseStudy.cotroller.CustomerController;
 import CaseStudy.model.Customer;
+import com.sun.scenario.effect.impl.sw.java.JSWBlend_SRC_OUTPeer;
 
 
 import java.util.Scanner;
@@ -10,6 +11,7 @@ public class CustomerView {
     private final CustomerController customerController = new CustomerController();
 
     private final Scanner scanner = new Scanner(System.in);
+    private Customer customer = new Customer();
 
     public void menuCustomer() {
         do {
@@ -28,12 +30,42 @@ public class CustomerView {
                     customerController.displayCustomer(customer);
                     break;
                 case 2:
+                    System.out.print("input id: ");
+                    int id = Integer.parseInt(scanner.nextLine());
+                    System.out.print("input name: ");
+                    String name = scanner.nextLine();
+                    System.out.print("input date of birth: ");
+                    String date = scanner.nextLine();
+                    System.out.print("input gender: ");
+                    String gender = scanner.nextLine();
+                    System.out.print("input identity card: ");
+                    int identity = Integer.parseInt(scanner.nextLine());
+                    System.out.print("input phone:");
+                    int phone = Integer.parseInt(scanner.nextLine());
+                    System.out.print("input mail: ");
+                    String mail = scanner.nextLine();
+                    System.out.print("input customer code: ");
+                    int customerCode = Integer.parseInt(scanner.nextLine());
+                    System.out.print("input type of guest: ");
+                    String typeOfGuest = scanner.nextLine();
+                    System.out.println("input address: ");
+                    String add = scanner.nextLine();
+                    customer = new Customer(id, name, date, gender, identity, phone, mail, customerCode, typeOfGuest, add);
                     customerController.addCustomer(customer);
                     break;
                 case 3:
                     customerController.deleteCustomer(customer);
                     break;
                 case 4:
+                    System.out.println("input customer code edit:");
+                    int cusCodeEdit = Integer.parseInt(scanner.nextLine());
+                    System.out.println("input id edit:");
+                    int idEdit = Integer.parseInt(scanner.nextLine());
+                    System.out.println("input phone edit: ");
+                    int phoneEdit = Integer.parseInt(scanner.nextLine());
+                    customer.setCustomerCode(cusCodeEdit);
+                    customer.setId(idEdit);
+                    customer.setPhone(phoneEdit);
                     customerController.editCustomer(customer);
                     break;
                 case 5:
