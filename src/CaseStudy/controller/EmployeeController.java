@@ -1,4 +1,4 @@
-package CaseStudy.cotroller;
+package CaseStudy.controller;
 
 import CaseStudy.model.Employee;
 import CaseStudy.service.EmployeeServiceImpl;

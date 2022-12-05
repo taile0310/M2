@@ -1,6 +1,8 @@
 package CaseStudy.model;
 
-public class Facility {
+import CaseStudy.view.FacilityView;
+
+public abstract class Facility {
     private String serviceName;
     private Double usableArea;
     private Double rentCost;
@@ -67,5 +69,21 @@ public class Facility {
                 ", numOfPeople=" + numOfPeople +
                 ", rentalType='" + rentalType + '\'' +
                 '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return this.serviceName.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Facility){
+            Facility facility = (Facility) obj;
+            if (this.serviceName.equals(facility.serviceName)){
+                return true;
+            }
+        }
+        return false;
     }
 }

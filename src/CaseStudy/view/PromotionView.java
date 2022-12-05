@@ -1,6 +1,6 @@
 package CaseStudy.view;
 
-import CaseStudy.cotroller.PromotionController;
+import CaseStudy.controller.PromotionController;
 import CaseStudy.model.Promotion;
 
 import java.util.Scanner;

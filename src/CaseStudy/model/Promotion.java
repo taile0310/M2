@@ -1,12 +1,13 @@
 package CaseStudy.model;
 
-public class Promotion extends Person {
+public class Promotion extends Employee {
     private String voucher;
 
     public Promotion() {
     }
 
-    public Promotion(String voucher) {
+    public Promotion(int id, String name, String dateOfBirth, String gender, int identityCard, int phone, String mail, String level, String location, Double wage, String voucher) {
+        super(id, name, dateOfBirth, gender, identityCard, phone, mail, level, location, wage);
         this.voucher = voucher;
     }
 

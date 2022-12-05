@@ -1,6 +1,6 @@
 package CaseStudy.view;
 
-import CaseStudy.cotroller.BookingController;
+import CaseStudy.controller.BookingController;
 import CaseStudy.model.Booking;
 
 import java.util.Scanner;

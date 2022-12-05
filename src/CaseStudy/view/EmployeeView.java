@@ -1,6 +1,6 @@
 package CaseStudy.view;
 
-import CaseStudy.cotroller.EmployeeController;
+import CaseStudy.controller.EmployeeController;
 import CaseStudy.model.Employee;
 
 
@@ -54,7 +54,6 @@ public class EmployeeView {
                     break;
                 case 3:
                     employeeController.deleteEmployee(employee);
-
                     break;
                 case 4:
                     System.out.println("input id edit: ");

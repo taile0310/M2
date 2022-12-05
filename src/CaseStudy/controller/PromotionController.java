@@ -1,4 +1,4 @@
-package CaseStudy.cotroller;
+package CaseStudy.controller;
 
 import CaseStudy.model.Promotion;
 import CaseStudy.service.IPromotion;

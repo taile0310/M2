@@ -1,8 +1,7 @@
 package CaseStudy.view;
 
-import CaseStudy.cotroller.CustomerController;
+import CaseStudy.controller.CustomerController;
 import CaseStudy.model.Customer;
-import com.sun.scenario.effect.impl.sw.java.JSWBlend_SRC_OUTPeer;
 
 
 import java.util.Scanner;
