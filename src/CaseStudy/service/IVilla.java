@@ -1,7 +1,7 @@
 package CaseStudy.service;
 
 
-import CaseStudy.model.Villa;
+import CaseStudy.model.facility.Villa;
 
 public interface IVilla {
     void display(Villa villa);

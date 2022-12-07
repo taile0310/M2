@@ -1,6 +1,6 @@
 package CaseStudy.service;
 
-import CaseStudy.model.Customer;
+import CaseStudy.model.person.Customer;
 
 public interface ICustomer {
     void display(Customer customer);

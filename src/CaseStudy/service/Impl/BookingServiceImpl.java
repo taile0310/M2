@@ -1,8 +1,9 @@
-package CaseStudy.service;
+package CaseStudy.service.Impl;
 
 import CaseStudy.model.Booking;
+import CaseStudy.service.IBooking;
 
-public class BookingServiceImpl implements IBooking{
+public class BookingServiceImpl implements IBooking {
 
     @Override
     public void display(Booking booking) {

@@ -1,6 +1,8 @@
-package CaseStudy.model;
+package CaseStudy.model.facility;
 
-public class Villa extends Facility{
+import CaseStudy.model.Facility;
+
+public class Villa extends Facility {
     private String roomStandard;
     private Double poolArea;
     private int numOfFloors;

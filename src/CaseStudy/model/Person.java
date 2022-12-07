@@ -1,6 +1,6 @@
 package CaseStudy.model;
 
-public  abstract class Person {
+public abstract class Person {
     private int id;
     private String name;
     private String dateOfBirth;
@@ -9,10 +9,10 @@ public  abstract class Person {
     private int phone;
     private String mail;
 
-    public Person() {
+    protected Person() {
     }
 
-    public Person(int id, String name, String dateOfBirth, String gender, int identityCard, int phone, String mail) {
+    protected Person(int id, String name, String dateOfBirth, String gender, int identityCard, int phone, String mail) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;

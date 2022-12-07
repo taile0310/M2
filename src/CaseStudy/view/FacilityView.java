@@ -1,11 +1,9 @@
 package CaseStudy.view;
 
+import CaseStudy.utils.Validate;
 import CaseStudy.controller.FacilityController;
-import CaseStudy.controller.RoomController;
-import CaseStudy.controller.VillaController;
-import CaseStudy.model.Facility;
-import CaseStudy.model.Room;
-import CaseStudy.model.Villa;
+import CaseStudy.model.facility.Room;
+import CaseStudy.model.facility.Villa;
 
 import java.util.Scanner;
 
@@ -14,7 +12,7 @@ public class FacilityView {
 
     private final Scanner scanner = new Scanner(System.in);
     //    private final VillaController villaController = new VillaController();
-//    private final RoomController roomController = new RoomController();
+    //    private final RoomController roomController = new RoomController();
     boolean isExit = true;
 
     public void menuFacility() {
@@ -38,37 +36,37 @@ public class FacilityView {
                         switch (chooseNum) {
                             case 1:
                                 System.out.println("input service name");
-                                String nameV = scanner.nextLine();
+                                String nameV = Validate.validateRegex(Validate.SERVICENAME_REGEX);
                                 System.out.println("input usable Area");
-                                Double areaV = Double.parseDouble(scanner.nextLine());
+                                Double areaV = Double.parseDouble(Validate.validateRegex(Validate.AREA_REGEX));
                                 System.out.println("input rent cost");
-                                Double costV = Double.parseDouble(scanner.nextLine());
+                                Double costV = Double.parseDouble(Validate.validateRegex(Validate.COST_REGEX));
                                 System.out.println("input number of people");
-                                int numOfPeopleV = Integer.parseInt(scanner.nextLine());
+                                int numOfPeopleV = Integer.parseInt(Validate.validateRegex(Validate.NUMPEOPLE_REGEX));
                                 System.out.println("input rental type");
-                                String rentalV = scanner.nextLine();
+                                String rentalV = Validate.validateRegex(Validate.RENTALTYPE_REGEX);
                                 System.out.println("input room standard");
-                                String standardV = scanner.nextLine();
+                                String standardV = Validate.validateRegex(Validate.TYPEROOM_REGEX);
                                 System.out.println("input pool area");
-                                Double poolAreaV = Double.parseDouble(scanner.nextLine());
+                                Double poolAreaV = Double.parseDouble(Validate.validateRegex(Validate.AREAPOOL_REGEX));
                                 System.out.println("input num of floor");
-                                int numOfFloorV = Integer.parseInt(scanner.nextLine());
+                                int numOfFloorV = Integer.parseInt(Validate.validateRegex(Validate.NUMFLOOR_REGEX));
                                 Villa villa = new Villa(nameV, areaV, costV, numOfPeopleV, rentalV, standardV, poolAreaV, numOfFloorV);
                                 facilityController.addNewVilla(villa);
                                 break;
                             case 2:
                                 System.out.println("input service name");
-                                String nameR = scanner.nextLine();
+                                String nameR = Validate.validateRegex(Validate.SERVICENAME_REGEX);
                                 System.out.println("input usable Area");
-                                Double areaR = Double.parseDouble(scanner.nextLine());
+                                Double areaR = Double.parseDouble(Validate.validateRegex(Validate.AREA_REGEX));
                                 System.out.println("input rent cost");
-                                Double costR = Double.parseDouble(scanner.nextLine());
+                                Double costR = Double.parseDouble(Validate.validateRegex(Validate.AREA_REGEX));
                                 System.out.println("input number of people");
-                                int numOfPeopleR = Integer.parseInt(scanner.nextLine());
+                                int numOfPeopleR = Integer.parseInt(Validate.validateRegex(Validate.NUMPEOPLE_REGEX));
                                 System.out.println("input rental type");
-                                String rentalR = scanner.nextLine();
+                                String rentalR = Validate.validateRegex(Validate.RENTALTYPE_REGEX);
                                 System.out.println("input free service");
-                                String freeServiceR = scanner.nextLine();
+                                String freeServiceR = Validate.validateRegex(Validate.FREESERVICE_REGEX);
                                 Room room = new Room(nameR, areaR, costR, numOfPeopleR, rentalR, freeServiceR);
                                 facilityController.addNewRoom(room);
                                 break;

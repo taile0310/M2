@@ -1,7 +1,7 @@
 package CaseStudy.view;
 
-import CaseStudy.controller.EmployeeController;
-import CaseStudy.model.Employee;
+import CaseStudy.controller.person_controller.EmployeeController;
+import CaseStudy.model.person.Employee;
 
 
 import java.util.Scanner;

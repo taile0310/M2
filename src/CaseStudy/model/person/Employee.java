@@ -1,4 +1,6 @@
-package CaseStudy.model;
+package CaseStudy.model.person;
+
+import CaseStudy.model.Person;
 
 public class Employee extends Person {
     private String level;

@@ -1,11 +1,12 @@
-package CaseStudy.service;
+package CaseStudy.service.Impl;
 
-import CaseStudy.model.Room;
+import CaseStudy.model.facility.Room;
+import CaseStudy.service.IRoom;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RoomServiceImpl implements IRoom{
+public class RoomServiceImpl implements IRoom {
     private static final List<Room> roomList = new ArrayList<>();
     @Override
     public void display(Room room) {

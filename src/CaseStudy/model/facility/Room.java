@@ -1,6 +1,8 @@
-package CaseStudy.model;
+package CaseStudy.model.facility;
 
-public class Room extends Facility{
+import CaseStudy.model.Facility;
+
+public class Room extends Facility {
     private String freeService;
 
     public Room() {

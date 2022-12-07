@@ -1,16 +1,14 @@
-package CaseStudy.service;
+package CaseStudy.service.Impl;
 
 import CaseStudy.model.Facility;
-import CaseStudy.model.Room;
-import CaseStudy.model.Villa;
+import CaseStudy.model.facility.Room;
+import CaseStudy.model.facility.Villa;
+import CaseStudy.service.IFacility;
 
-import java.security.Key;
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
-public class FacilityServiceImpl implements IFacility{
+public class FacilityServiceImpl implements IFacility {
     private static final LinkedHashMap<Facility, Integer> facilitiList = new LinkedHashMap<>();
 
     static {
@@ -25,7 +23,6 @@ public class FacilityServiceImpl implements IFacility{
     public void display() {
         for (Map.Entry<Facility,Integer> entry : facilitiList.entrySet()) {
             System.out.println(entry);
-
         }
     }
 
@@ -39,9 +36,7 @@ public class FacilityServiceImpl implements IFacility{
             if (entry.getValue() >= 5){
                 System.out.println(entry + " " + " cần phải bảo trì");
             }
-
         }
-
     }
 
     @Override

@@ -1,7 +1,7 @@
-package CaseStudy.service;
+package CaseStudy.service.Impl;
 
-import CaseStudy.model.Customer;
-import CaseStudy.model.Employee;
+import CaseStudy.model.person.Customer;
+import CaseStudy.service.ICustomer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,9 +31,9 @@ public class CustomerServiceImpl implements ICustomer {
             }
 
         }
-        if (deleteCus == null){
+
             customerList.remove(deleteCus);
-        }
+
 
     }
 

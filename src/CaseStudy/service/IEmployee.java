@@ -1,8 +1,6 @@
 package CaseStudy.service;
 
-import CaseStudy.model.Employee;
-
-import java.util.List;
+import CaseStudy.model.person.Employee;
 
 public interface IEmployee {
     void display(Employee employee);

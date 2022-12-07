@@ -1,6 +1,7 @@
-package CaseStudy.service;
+package CaseStudy.service.Impl;
 
-import CaseStudy.model.Employee;
+import CaseStudy.model.person.Employee;
+import CaseStudy.service.IEmployee;
 
 
 import java.util.ArrayList;

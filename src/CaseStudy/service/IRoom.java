@@ -1,7 +1,7 @@
 package CaseStudy.service;
 
 
-import CaseStudy.model.Room;
+import CaseStudy.model.facility.Room;
 
 public interface IRoom {
     void display(Room room);

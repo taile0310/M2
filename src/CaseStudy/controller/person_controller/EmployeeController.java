@@ -1,7 +1,7 @@
-package CaseStudy.controller;
+package CaseStudy.controller.person_controller;
 
-import CaseStudy.model.Employee;
-import CaseStudy.service.EmployeeServiceImpl;
+import CaseStudy.model.person.Employee;
+import CaseStudy.service.Impl.EmployeeServiceImpl;
 import CaseStudy.service.IEmployee;
 
 public class EmployeeController {

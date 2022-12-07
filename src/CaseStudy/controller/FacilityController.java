@@ -1,12 +1,10 @@
 package CaseStudy.controller;
 
 import CaseStudy.model.Facility;
-import CaseStudy.model.Room;
-import CaseStudy.model.Villa;
-import CaseStudy.service.FacilityServiceImpl;
+import CaseStudy.model.facility.Room;
+import CaseStudy.model.facility.Villa;
+import CaseStudy.service.Impl.FacilityServiceImpl;
 import CaseStudy.service.IFacility;
-
-import java.io.Reader;
 
 public class FacilityController {
     IFacility facilityService = new FacilityServiceImpl();

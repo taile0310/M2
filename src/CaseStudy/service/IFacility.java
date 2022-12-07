@@ -1,8 +1,8 @@
 package CaseStudy.service;
 
 import CaseStudy.model.Facility;
-import CaseStudy.model.Room;
-import CaseStudy.model.Villa;
+import CaseStudy.model.facility.Room;
+import CaseStudy.model.facility.Villa;
 
 public interface IFacility {
     void display();

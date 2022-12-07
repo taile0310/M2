@@ -1,7 +1,7 @@
 package CaseStudy.controller;
 
 import CaseStudy.model.Booking;
-import CaseStudy.service.BookingServiceImpl;
+import CaseStudy.service.Impl.BookingServiceImpl;
 import CaseStudy.service.IBooking;
 
 public class BookingController {

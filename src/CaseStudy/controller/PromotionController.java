@@ -2,7 +2,7 @@ package CaseStudy.controller;
 
 import CaseStudy.model.Promotion;
 import CaseStudy.service.IPromotion;
-import CaseStudy.service.PromotionServiceImpl;
+import CaseStudy.service.Impl.PromotionServiceImpl;
 
 public class PromotionController {
     IPromotion iPromotion = new PromotionServiceImpl();

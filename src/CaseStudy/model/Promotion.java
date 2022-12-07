@@ -1,5 +1,7 @@
 package CaseStudy.model;
 
+import CaseStudy.model.person.Employee;
+
 public class Promotion extends Employee {
     private String voucher;
 

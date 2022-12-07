@@ -1,7 +1,7 @@
 package CaseStudy.view;
 
-import CaseStudy.controller.CustomerController;
-import CaseStudy.model.Customer;
+import CaseStudy.controller.person_controller.CustomerController;
+import CaseStudy.model.person.Customer;
 
 
 import java.util.Scanner;

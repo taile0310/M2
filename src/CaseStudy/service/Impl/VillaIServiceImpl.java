@@ -1,6 +1,7 @@
-package CaseStudy.service;
+package CaseStudy.service.Impl;
 
-import CaseStudy.model.Villa;
+import CaseStudy.model.facility.Villa;
+import CaseStudy.service.IVilla;
 
 import java.util.ArrayList;
 import java.util.List;

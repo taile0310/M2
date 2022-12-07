@@ -1,7 +1,7 @@
 //package CaseStudy.view;
 //
-//import CaseStudy.controller.RoomController;
-//import CaseStudy.model.Room;
+//import CaseStudy.controller.facilityController.RoomController;
+//import CaseStudy.model.facility.Room;
 //
 //import java.util.Scanner;
 //

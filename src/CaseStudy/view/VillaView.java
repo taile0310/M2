@@ -1,8 +1,8 @@
 //package CaseStudy.view;
 //
-//import CaseStudy.controller.VillaController;
+//import CaseStudy.controller.facilityController.VillaController;
 //
-//import CaseStudy.model.Villa;
+//import CaseStudy.model.facility.Villa;
 //
 //import java.util.Scanner;
 //

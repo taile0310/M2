@@ -1,8 +1,8 @@
-package CaseStudy.controller;
+package CaseStudy.controller.facility_controller;
 
-import CaseStudy.model.Villa;
+import CaseStudy.model.facility.Villa;
 import CaseStudy.service.IVilla;
-import CaseStudy.service.VillaIServiceImpl;
+import CaseStudy.service.Impl.VillaIServiceImpl;
 
 public class VillaController {
     IVilla iVilla = new VillaIServiceImpl();

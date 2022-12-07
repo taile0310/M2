@@ -1,8 +1,8 @@
-package CaseStudy.controller;
+package CaseStudy.controller.facility_controller;
 
-import CaseStudy.model.Room;
+import CaseStudy.model.facility.Room;
 import CaseStudy.service.IRoom;
-import CaseStudy.service.RoomServiceImpl;
+import CaseStudy.service.Impl.RoomServiceImpl;
 
 public class RoomController {
     IRoom iRoom = new RoomServiceImpl();
