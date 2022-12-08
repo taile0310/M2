@@ -33,18 +33,19 @@ public class CustomerServiceImpl implements ICustomer {
             if (customer.getIdentityCard() == cus.getIdentityCard()) {
                 deleteCus = cus;
             }
-
         }
-        customers.remove(deleteCus);
-        this.customerCharacter.writeFileCustomer(pathFile, customers);
+        if (deleteCus != null) {
+            customers.remove(deleteCus);
+            this.customerCharacter.writeFileCustomer(pathFile, customers);
+        }
     }
 
     @Override
     public void edit(Customer customer) throws IOException {
         List<Customer> customers = this.customerCharacter.readFileCustomer(pathFile);
         for (Customer cus : customers) {
-            cus.setCustomerCode(customer.getCustomerCode());
-            cus.setId(customer.getId());
+            cus.setPhone(customer.getPhone());
+            cus.setAddress(customer.getAddress());
             cus.setPhone(customer.getPhone());
         }
         this.customerCharacter.writeFileCustomer(pathFile, customers);

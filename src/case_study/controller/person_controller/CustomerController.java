@@ -7,7 +7,7 @@ import case_study.service.ICustomer;
 import java.io.IOException;
 
 public class CustomerController{
-    ICustomer iCustomer = new CustomerServiceImpl();
+    private final ICustomer iCustomer = new CustomerServiceImpl();
 
         public void displayCustomer(Customer customer){
             try {

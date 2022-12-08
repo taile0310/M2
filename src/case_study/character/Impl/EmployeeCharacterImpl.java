@@ -16,12 +16,14 @@ public class EmployeeCharacterImpl implements IFileListEmployee {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] arr = line.split(",");
-                Employee employee = new Employee(Integer.parseInt(arr[0]), arr[1], arr[2], arr[3], Integer.parseInt(arr[4]), Integer.parseInt(arr[5]), arr[6], arr[7], arr[8], Double.parseDouble(arr[9]));
+                Employee employee = new Employee(Integer.parseInt(arr[0]), arr[1], arr[2], arr[3],
+                        Integer.parseInt(arr[4]), Integer.parseInt(arr[5]), arr[6], arr[7], arr[8], Double.parseDouble(arr[9]));
                 employees.add(employee);
             }
             bufferedReader.close();
             return employees;
     }
+
 
 
 

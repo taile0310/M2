@@ -5,7 +5,7 @@ import case_study.service.IVilla;
 import case_study.service.Impl.VillaIServiceImpl;
 
 public class VillaController {
-    IVilla iVilla = new VillaIServiceImpl();
+    private final IVilla iVilla = new VillaIServiceImpl();
 
     public void displayVilla(Villa villa) {
         this.iVilla.display(villa);

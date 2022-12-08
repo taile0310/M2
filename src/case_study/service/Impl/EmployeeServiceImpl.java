@@ -48,8 +48,8 @@ public class EmployeeServiceImpl implements IEmployee {
     public void edit(Employee employee) throws IOException {
         List<Employee> employeeList = this.employeeCharacter.readFileEmployee(pathFile);
         for (Employee employee1 : employeeList) {
-            employee1.setId(employee.getId());
-            employee1.setIdentityCard(employee.getIdentityCard());
+            employee1.setName(employee.getName());
+            employee1.setWage(employee.getWage());
             employee1.setName(employee.getName());
             break;
         }

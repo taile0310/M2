@@ -5,7 +5,7 @@ import case_study.service.Impl.BookingServiceImpl;
 import case_study.service.IBooking;
 
 public class BookingController {
-    IBooking iBooking = new BookingServiceImpl();
+    private final IBooking iBooking = new BookingServiceImpl();
 
     public void displayBooking(Booking booking) {
         this.iBooking.display(booking);

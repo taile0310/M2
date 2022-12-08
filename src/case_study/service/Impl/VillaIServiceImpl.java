@@ -32,7 +32,7 @@ public class VillaIServiceImpl implements IVilla {
                 break;
             }
         }
-        if (deleteVilla == null) {
+        if (deleteVilla != null) {
             villaList.remove(deleteVilla);
         }
     }

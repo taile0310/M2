@@ -5,7 +5,7 @@ import case_study.service.IPromotion;
 import case_study.service.Impl.PromotionServiceImpl;
 
 public class PromotionController {
-    IPromotion iPromotion = new PromotionServiceImpl();
+    private final IPromotion iPromotion = new PromotionServiceImpl();
 
     public void displayUser(Promotion promotion) {
         this.iPromotion.displayPerson(promotion);

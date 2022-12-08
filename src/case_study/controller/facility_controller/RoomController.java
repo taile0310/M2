@@ -5,7 +5,7 @@ import case_study.service.IRoom;
 import case_study.service.Impl.RoomServiceImpl;
 
 public class RoomController {
-    IRoom iRoom = new RoomServiceImpl();
+    private final IRoom iRoom = new RoomServiceImpl();
 
     public void displayRoom(Room room) {
         this.iRoom.display(room);

@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class EmployeeController {
 
-    IEmployee employeeService = new EmployeeServiceImpl();
+    private final IEmployee employeeService = new EmployeeServiceImpl();
 
     public void displayEmployee(){
         try {

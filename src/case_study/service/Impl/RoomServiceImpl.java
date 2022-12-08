@@ -30,7 +30,7 @@ public class RoomServiceImpl implements IRoom {
                 break;
             }
         }
-        if (deleteRoom == null){
+        if (deleteRoom != null){
             roomList.remove(deleteRoom);
         }
     }

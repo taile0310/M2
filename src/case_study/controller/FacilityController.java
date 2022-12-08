@@ -7,7 +7,7 @@ import case_study.service.Impl.FacilityServiceImpl;
 import case_study.service.IFacility;
 
 public class FacilityController {
-    IFacility facilityService = new FacilityServiceImpl();
+    private final IFacility facilityService = new FacilityServiceImpl();
     public void displayFacility(){
         this.facilityService.display();
     }
